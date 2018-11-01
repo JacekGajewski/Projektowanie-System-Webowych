@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Dane</title>
+	<meta name="description" content="Polecane książki do przeczytania"/>
+	<meta name="keywords" content="książka, książki, lektura"/>
+	<link rel="stylesheet" href="dane.css" type="text/css" />
+
+</head>
+
+<style>
+	
+	input[type=text]{
+		background: pink;
+	}
+
+</style>
+<body>
+		<form action="index.html">
+			<div>
+			
+				Twój pseudonim: <br />
+					<input type="text" id="log" name="log" placeholder="Login"><br />
+				Miejsce zamieszkania:<br />
+					<input type="text" id="city" name="city" placeholder="Miasto/miejscowość"><br/>
+			    <label for="start">Miesiąc urodzenia </label><br />
+						<input type="month" id="start" name="start" min="1918-03" value="2018-05" />
+						<span class="validity"></span><br />
+				Zdjęcie profilowe (Adres URL): <br />
+					<input type="url" name="u" id = "u" placeholder="https://cdn.pixabay.com/photo/2014/04/02/14/11/male-306408_1280.png"><br />
+				Zdjęcie profilowe:<br />
+					<input type="file" name="im" id ="im" /><br/>
+				Ustaw kolor tcionki na profilu: <br />
+					<input type="color" id="kolor" name="kolor"><br />
+				Ustaw głośność: <br />
+					<input type="range" id="cyf" name="cyf"  min="0" max = "9"><br />
+				Ulubiona książka: <br />
+					    <input type="search" id="mySearch" name="mySearch"  placeholder="Wyszukaj">
+						<button>Szukaj</button>
+
+			
+
+				<br />
+				<button type="submit">Wyślij</button>
+				<button type="reset">Wyczyść Dane</button>
+		  <div id ="a"><a href="newsletter.html">Powrót do rejestracji</a></div>
+		</div>
+	</form>
+
+	<p>afkjseblfsbe;fisn</p>
+</body>
+</html>
