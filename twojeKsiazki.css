@@ -1,0 +1,156 @@
+body{
+	margin: 0;
+	background-image: url("bible.jpg");
+	background-size: cover;
+}
+
+.navigation {
+	width: 80%
+	margin: 0 auto;
+}
+
+header{
+	background: grey;
+	height: 40px;
+	/*z-index: 100;*/
+}
+
+header:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+nav{
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 70px;
+	padding-top: 25px; 
+	padding: 10px 0;
+	position: relative;
+	float: left;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16px;
+}
+
+nav a:hover{
+	color: black;
+}
+
+nav a:before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: #444;
+	position: absolute;
+	top: 0;
+	transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	margin-top: 8px;
+}
+
+nav ul li ul li{
+	margin-left: 0;
+	/*position: absolute;*/
+	background-color: grey;
+	padding-top: 16px; 
+	padding-left: 10px;
+	padding-right: 10px;
+	display: block;
+	float: none;
+}
+
+.drop {
+	/*position: absolute;*/
+}
+
+nav ul li ul li a{
+	display: block;
+}
+
+nav ul li:hover ul{
+	display: block;
+}
+
+nav ul li ul li ul {
+	position: absolute;
+	margin-top: -36px;
+	margin-left: 100px;
+
+}
+
+nav ul li ul li ul li{
+	/*margin-left: 120px;*/
+	/*position: absolute;*/
+	background-color: grey;
+	display: none;
+}
+
+nav ul li ul li:hover ul li{
+	display: inline-block;
+}
+
+.container {
+	width: 940px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	background-color: grey;
+}
+
+table{
+	width: 100%;
+
+}
+
+tr:first-child{
+	background-color: #404040;
+}
+h2:only-child{
+	font-size: 30px;
+	font-family: myFirstFont;
+}
+h2{
+	 position :relative;
+	-webkit-animation-name: mymove; 
+    -webkit-animation-duration: 4s;
+
+}
+@-webkit-keyframes mymove {
+    from {left: 400px;}
+    to {left: 0px;}
+}
+
+#borderimg { 
+    border: 25px solid transparent;
+    border-image-source: url(borders.png);    
+	border-image-repeat: round;
+    border-image-slice: 60;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(Charmonman-Regular.ttf);
+}

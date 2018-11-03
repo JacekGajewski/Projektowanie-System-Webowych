@@ -1,0 +1,220 @@
+*{
+	color: white;
+}
+body{
+	background-image: url("lotr_bg.jpg");
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+a:visited {
+    color: blue;
+}
+
+.navigation {
+	width: 80%
+	margin: 0 auto;
+}
+
+header{
+	background: grey;
+	height: 40px;
+	/*z-index: 100;*/
+}
+
+header:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+nav{
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 70px;
+	padding-top: 25px; 
+	padding: 10px 0;
+	position: relative;
+	float: left;
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16px;
+}
+
+nav a:visited{
+	color: white;
+}
+
+nav a:hover{
+	color: black;
+}
+
+nav a:before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: #444;
+	position: absolute;
+	top: 0;
+	transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	margin-top: 8px;
+}
+
+nav ul li ul li{
+	margin-left: 0;
+	/*position: absolute;*/
+	background-color: grey;
+	padding-top: 16px; 
+	padding-left: 10px;
+	padding-right: 10px;
+	display: block;
+	float: none;
+}
+
+.drop {
+	/*position: absolute;*/
+}
+
+nav ul li ul li a{
+	display: block;
+}
+
+nav ul li:hover ul{
+	display: block;
+}
+
+nav ul li ul li ul {
+	position: absolute;
+	margin-top: -36px;
+	margin-left: 100px;
+
+}
+
+nav ul li ul li ul li{
+	/*margin-left: 120px;*/
+	/*position: absolute;*/
+	background-color: grey;
+	display: none;
+}
+
+nav ul li ul li:hover ul li{
+	display: inline-block;
+}
+
+.container {
+	width: 940px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	background-color: grey;
+}
+
+p:first-child {
+	font-size: 110%;
+}
+
+h2
+{
+	font-size: 32px;
+	font-variant: small-caps;
+	font-weight:bold;
+	font-family: Courier, monospace;
+	line-height: 150%;
+}
+
+:target {
+    border: 5px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+
+table {
+    width: 50%;
+}
+
+table, td {
+   border: 5px;
+}
+
+td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+td:first-child{
+	background-color: black;
+}
+
+td{
+	border: 5px;
+}
+
+
+#background{
+	background-image: url("wpokladka.jpg");
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-origin: left;
+}
+
+	#a	{
+	padding: 5px;
+    width: 150px;
+    height: 20px;
+    background: black;
+    -webkit-transition: width 2s; 
+
+   
+}
+
+#a:hover {
+    width: 200px;
+	
+	background: white;
+}
+
+#okl{
+	-webkit-animation: rot 5s;
+}
+@-webkit-keyframes rot {
+    50% {-webkit-transform: rotate(180deg);}
+}
+
+table {
+    border-collapse: collapse;
+	border: 5px solid white;
+}
+
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#C0C0C0;}
+ 
