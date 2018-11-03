@@ -1,11 +1,11 @@
 body{
-	background-image: url("gradient.png");
+	background-image: url("images/gradient.png");
 	background-size: 100% 100px;
 	background-repeat: repeat-y;
 }
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 

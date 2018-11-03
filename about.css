@@ -4,14 +4,14 @@
 
 body{
 	margin: 0;
-	background-image: url("bible.jpg");
+	background-image: url("images/bible.jpg");
 	background-size: cover;
 }
 
 
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -130,7 +130,7 @@ nav ul li ul li:hover ul li{
 	margin-right: auto;
 	padding: 15px;
 	background-color: grey;
-	background-image: url("logo.png");
+	background-image: url("images/logo.png");
 	background-repeat: no-repeat;
 	/*background-origin: border-box;*/
     background-position: center; 

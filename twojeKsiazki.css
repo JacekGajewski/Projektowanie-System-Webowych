@@ -1,11 +1,11 @@
 body{
 	margin: 0;
-	background-image: url("bible.jpg");
+	background-image: url("images/bible.jpg");
 	background-size: cover;
 }
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -146,7 +146,7 @@ h2{
 
 #borderimg { 
     border: 25px solid transparent;
-    border-image-source: url(borders.png);    
+    border-image-source: url(images/borders.png);
 	border-image-repeat: round;
     border-image-slice: 60;
 }

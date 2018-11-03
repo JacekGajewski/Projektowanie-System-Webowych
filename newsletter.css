@@ -1,12 +1,12 @@
 body{
 	margin: 0;
-	background-image: url("bible.jpg");
+	background-image: url("images/bible.jpg");
 	background-size: cover;
 	color: white;
 }
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -152,7 +152,7 @@ input:required {
 }
 
 a:link {
-    background-color;
+    /*background-color;*/
 }
 
 button:active{

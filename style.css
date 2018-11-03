@@ -4,7 +4,7 @@
 
 body{
 	margin: 0;
-	background-image: url("bible.jpg");
+	background-image: url("images/bible.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -12,7 +12,7 @@ body{
 
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 

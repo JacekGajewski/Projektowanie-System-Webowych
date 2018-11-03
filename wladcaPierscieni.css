@@ -2,7 +2,7 @@
 	color: white;
 }
 body{
-	background-image: url("lotr_bg.jpg");
+	background-image: url("images/lotr_bg.jpg");
 	background-position: left top;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -14,7 +14,7 @@ a:visited {
 }
 
 .navigation {
-	width: 80%
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -176,7 +176,7 @@ td{
 
 
 #background{
-	background-image: url("wpokladka.jpg");
+	background-image: url("images/wpokladka.jpg");
 	background-position: left top;
 	background-repeat: no-repeat;
 	background-origin: left;
