@@ -240,3 +240,6 @@ table img {
 	font-size: 22px;
 }
 
+#parseInt, #parseFloat, #submit, #go{
+	color: black;
+}

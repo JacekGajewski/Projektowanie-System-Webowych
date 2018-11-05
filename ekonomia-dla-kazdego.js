@@ -14,10 +14,11 @@ function prace() {
     alert("Błąd! Spróbuj ponownie później.")
 }
 
-
 function emailPrompt() {
-    var email =  prompt("Podaj email:");
-    if (email != null){
-        emailSpan.textContent = email;
-    }
+    var email;
+    do {
+        email =  prompt("Podaj email:");
+    }while (email.length < 1);
+
+    emailSpan.textContent = email;
 }
