@@ -11,7 +11,7 @@ buyButton.addEventListener("click", prace);
 powiadomButton.addEventListener("click", emailPrompt);
 
 function prace() {
-    alert("Błąd! Spróbuj ponownie później.")
+    alert("Błąd! Spróbuj ponownie później.");
 }
 
 function emailPrompt() {

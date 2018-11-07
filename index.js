@@ -12,7 +12,7 @@ randomPlace();
 
 submitBtn.addEventListener("click", parse);
 
-goBtn.addEventListener("click", forLoop)
+goBtn.addEventListener("click", forLoop);
 
 function randomPlace() {
 
@@ -25,6 +25,7 @@ function randomPlace() {
         case 2:
             thirdPlace.textContent = "Droga królów";
             secondPlace.textContent = "Siła nawyku";
+            break;
     }
 
 }
@@ -39,8 +40,11 @@ function parse() {
 
 function forLoop() {
     var result ="";
-    for (var i = 0; i < 10; i++){
-        result += i.toString() + " | "
+    var numb=[1,2,3,4,5,6,7,8,9];
+    function printElt(element, index) {
+        result += element.toString() + " | ";
+
     }
+    numb.forEach(printElt);
     forResult.textContent = result;
 }
