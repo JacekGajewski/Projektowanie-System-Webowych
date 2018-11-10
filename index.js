@@ -1,50 +1,50 @@
-var secondPlace  = document.getElementById("second-place");
-var thirdPlace  = document.getElementById("third-place");
-var parseToInt  = document.getElementById("parseInt");
-var parseToFloat  = document.getElementById("parseFloat");
-var parseIntResult  = document.getElementById("parseIntResult");
-var parseFloatResult  = document.getElementById("parseFloatResult");
-var submitBtn  = document.getElementById("submit");
 var goBtn  = document.getElementById("go");
-var forResult  = document.getElementById("forResult");
+var addBtn  = document.getElementById("appendElement");
+var replaceBtn  = document.getElementById("replaceElement");
+var removeBtn  = document.getElementById("removeElement");
+var list  = document.getElementById("listAppend");
+var changeBackground  = document.getElementById("changeBackground");
 
-randomPlace();
+goBtn.addEventListener("click", addElement);
+replaceBtn.addEventListener("click", replaceElement);
+addBtn.addEventListener("click", addElementBefore);
 
-submitBtn.addEventListener("click", parse);
+removeBtn.addEventListener("click", removeElement);
 
-goBtn.addEventListener("click", forLoop);
+changeBackground.addEventListener("click", changeBackgroundColor);
 
-function randomPlace() {
+function addElement() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("CLICK ME");
+    btn.appendChild(t);
+    goBtn.appendChild(btn);
+}
 
-    var randomNumber = Math.floor((Math.random() * 2) + 1);
-    switch (randomNumber) {
-        case 1:
-            secondPlace.textContent = "Droga królów";
-            thirdPlace.textContent = "Siła nawyku";
-            break;
-        case 2:
-            thirdPlace.textContent = "Droga królów";
-            secondPlace.textContent = "Siła nawyku";
-            break;
-    }
+function addElementBefore() {
+    var newItem = document.createElement("LI");
+    var textnode = document.createTextNode("Zero");
+    newItem.appendChild(textnode);
+    list.insertBefore(newItem, list.childNodes[0]);
+}
+
+function replaceElement() {
+    var textnode = document.createTextNode("Zastąpiony");
+    var item = list.childNodes[1];
+    item.replaceChild(textnode, item.childNodes[0]);
+}
+
+function removeElement() {
+    var parentList = document.getElementById('thirdElement').parentNode;
+    parentList.removeChild(list.childNodes[1]);
+}
+
+function changeBackgroundColor() {
+    var container  = document.querySelector(".container");
+    container.classList.toggle("container-new-background");
+
 
 }
 
-function parse() {
-    var a = parseInt(parseToInt.value);
-    parseIntResult.innerHTML = a;
 
-    var b = parseFloat(parseToFloat.value);
-    parseFloatResult.innerHTML = b;
-}
 
-function forLoop() {
-    var result ="";
-    var numb=[1,2,3,4,5,6,7,8,9];
-    function printElt(element, index) {
-        result += element.toString() + " | ";
 
-    }
-    numb.forEach(printElt);
-    forResult.textContent = result;
-}

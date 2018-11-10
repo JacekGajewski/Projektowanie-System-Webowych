@@ -135,7 +135,24 @@ nav ul li ul li:hover ul li{
 	/*background-origin: border-box;*/
     background-position: center; 
     background-size: 300px 300px;
+	/*font-family: "Liberation Sans", Helvetica, sans-serif;*/
 }
+
+.container-arial{
+	font-family: Arial;
+}
+
+.container-times{
+	font-family: Helvetica, monospace;
+}
+
+.container-helvetica{
+	font-family: Helvetica;
+}
+
+/*.container-verdana{*/
+	/*font-family: "DejaVu Sans", sans-serif;*/
+/*}*/
 
 @media only screen and (max-width: 1000px) {
     .container  {

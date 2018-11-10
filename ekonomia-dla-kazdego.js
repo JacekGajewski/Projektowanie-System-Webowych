@@ -8,7 +8,8 @@ firstParagraph.innerHTML = "<strong>Pogrubienie</strong>";
 
 buyButton.addEventListener("click", prace);
 
-powiadomButton.addEventListener("click", emailPrompt);
+powiadomButton.addEventListener("mouseover", emailPrompt);
+
 
 function prace() {
     alert("Błąd! Spróbuj ponownie później.");

@@ -1,7 +1,3 @@
-*{
-	color: white;
-}
-
 body{
 	margin: 0;
 	background-image: url("images/bible.jpg");
@@ -162,7 +158,9 @@ a:visited {
 	margin-right: auto;
 	padding: 20px;
 	background-color: grey;
+	color: white;
 }
+
 
 @media only screen and (max-width: 1200px) {
     .container  {
@@ -175,7 +173,6 @@ table{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: black;
-	color: white;
 	border-collapse: collapse;
 
 	border-style: solid;
@@ -224,7 +221,6 @@ table img {
 
 #book-description{
 	font-size: .75em;
-	color: #D3D3D3;
 }
 
 #book-description th{
@@ -240,6 +236,12 @@ table img {
 	font-size: 22px;
 }
 
-#parseInt, #parseFloat, #submit, #go{
+#parseInt, #parseFloat, #submit, .button{
 	color: black;
+}
+
+
+.container-new-background{
+	background-color: red;
+	color: purple;
 }

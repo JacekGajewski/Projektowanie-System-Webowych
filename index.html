@@ -29,6 +29,7 @@
 					<li><a href="about.html">O nas</a></li>
 					<li><a href="reviews.html">Recenzje</a></li>
 					<li><a href="twojeKsiazki.html">Twoje ksiażki</a></li>
+					<li id="changeBackground"><a href="#">Styl</a></li>
 					<li><a href="newsletter.html">Rejestracja</a></li>
 				</ul>
 			</nav>
@@ -65,25 +66,25 @@
 					<th>Więcej >>></th>
 					<th>Więcej >>></th>
 					<th>Więcej >>></th>
-					<th>Więcej >>></th>i
+					<th>Więcej >>></th>
 				</tr>
 
 			</tbody>
 		</table>
 
-	<h2>Parse inputs</h2>
+	<button class="button" id="go">Go</button>
 
-	<form action="">
-		Parse to int: <input id="parseInt"  type="text" name="parseToInt"> <span id="parseIntResult"></span>
-		<br><br>
-		Parse to float: <input id="parseFloat" type="text"> <span id="parseFloatResult"></span>
-		<br><br>
-	</form>
-	<button id="submit">submit</button>
+	<h3>Lista appendBefore</h3>
 
-	<h2>For loop</h2>
-	<p id="forResult"></p>
-	<button id="go">Go</button>
+	<ul id="listAppend">
+		<li>Raz</li>
+		<li>Dwa</li>
+		<li id="thirdElement">Trzy</li>
+	</ul>
+
+	<button class="button" id="appendElement">Dodaj</button>
+	<button class="button" id="replaceElement">Zastap</button>
+	<button class="button" id="removeElement">Usuń</button>
 
 	<br>
 	<a id="top" ><h3>TOP 10 książek</h3></a>
