@@ -7,6 +7,7 @@
 	<meta name="description" content="Władca pierścieni"/>
 	<meta name="keywords" content="książka, książki, lektura"/>
 	<link rel="stylesheet" href="wladcaPierscieni.css" type="text/css" />
+	<script src="wladcaPierscieni.js"></script>
 
 
 </head>
@@ -43,21 +44,25 @@
 
 	<h2>Władca pierścieni</h2>
 
-		<div id ="okl" ><a href="images/wpokladka.jpg" download="wpokladka.jpg" title="Pobierz okładke" target="_blank">
+		<div id ="okl" ><a id="ikl" href="images/wpokladka.jpg" download="wpokladka.jpg" title="Pobierz okładke" target="_blank">
 			<img src="images/wpokladka.jpg" alt="book cover" width="200" height="300" >
 		</a></div>
+
+		<button onclick="linkZeZdjecia()"><p id="doml">Link kryjący się pod okładką</p></button><p id="demo1"></p>
 
 		<ul>
 			<li>
 				<strong>Autor: </strong><a href="https://pl.wikipedia.org/wiki/John_Ronald_Reuel_Tolkien" target="_blank" title="Dowiedz się więcej o autorze na Wikipedii"> J.R.R. Tolkien</a>
 			</li>
 			<li>
-				<strong>Tytuł: </strong>Władca pierścieni
+				<strong>Tytuł: </strong><a href="https://pl.wikipedia.org/wiki/W%C5%82adca_Pier%C5%9Bcieni" target="_blank" title="Dowiedz się więcej o książce na Wikipedii">Władca </a>
 			</li>
 			<li>
 				<strong>Ocena: </strong><meter value="9" min="0" max="10">8 out of 10</meter>9/10 
 			</li>
 		</ul>
+
+		<button onclick="ramkaLink()"><p id="doml">Ramka do linku "TYTUŁ"</p></button>
 		
 		<h4>Buy</h4>
 		<table>
@@ -88,9 +93,14 @@
 				</tr>
 			</tbody>
 		</table>
-			
+
+
 	<p><a href="#opinia1">Opinia 1</a></p>
 	<p><a href="#opinia2">Opinia 2</a></p>
+		<button onclick="ileLinkow()"><p id="doml">Ile linków na stronie</p></button>
+		<p id="demo3"></p>
+
+
 
 
 		<section style = "line-height: 1.3;">

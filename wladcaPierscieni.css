@@ -217,4 +217,7 @@ td {
 }
 
 tr:hover {background-color:#C0C0C0;}
- 
+
+#doml {
+	color: black;
+}
