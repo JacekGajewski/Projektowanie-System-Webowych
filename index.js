@@ -44,7 +44,24 @@ function changeBackgroundColor() {
 
 
 }
+function ileGrafik() {
+    var x = document.images.length;
+    document.getElementById("demo").innerHTML = x;
+}
+function zirudlo() {
+    var x = document.images;
+    var txt = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+        txt = txt +  x[i].src + "<br>";
+    }
+    document.getElementById("demo2").innerHTML = txt;
+}
 
+function ramka() {
+    var x = document.images[7];
+    x.style.border = "10px dotted white";
 
+}
 
 
