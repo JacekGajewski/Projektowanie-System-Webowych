@@ -65,5 +65,8 @@ function ramka() {
 }
 
 
-
+function ileEtykiet() {
+    var x = document.anchors.length;
+    document.getElementById("etykiety").innerHTML = x;
+}
 
