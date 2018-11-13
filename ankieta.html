@@ -6,6 +6,7 @@
 	<meta name="keywords" content="książka, książki, lektura"/>
 		<meta name="description" content="Ankieta do oceny książki"/>
 	<link rel="stylesheet" href="ankieta.css" type="text/css" />
+	<script src="ankieta.js"></script>
 	
 </head>
 <body>
@@ -57,13 +58,17 @@
 		  <input type="radio" name="gender" value="10"> 10
 		  <br> 
 		  Twój komentarz: <br>
-		  <textarea rows="5" cols="66" maxlength="200" disabled="disabled"> </textarea>
+		  <textarea  rows="5" cols="66" maxlength="200" onkeypress="kCode(event)"  onmousedown="mouseDown(event)"> </textarea>
 		  <br>
+			<p id="kc"></p>
+			<p id="klawisze"></p>
+			<br>
 		  <button type="submit">Prześlij Swoją Ocene</button>
 		 <button type="reset">Wyczyść Dane</button>
 		  
 		</div>
 	</form>
+
 
 	<p></p>
 	

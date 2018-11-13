@@ -6,7 +6,8 @@
 	<title>Recenzje</title>
 	<meta name="keywords" content="książka, książki, lektura, recenzje"/>
 	<meta name="description" content="Recenzje"/>
-	<link rel="stylesheet" type="text/css" href="reviews.css">
+	<link rel="stylesheet" type="text/css" href="reviews.css"/>
+		<script src="reviews.js"></script>
 </head>
 </head>
 <body>
@@ -37,11 +38,14 @@
 	</header>
 
 
-	<div class="container">
+	<div onmousemove="coor(event)" onmouseout="clearCoor()" class="container">
 
 
-		
+
+		<button id="b1" onclick="OknoTestowe()">Otwórz Okno Testowe</button>
+		<p id="coord"></p>
 	</div>
+
 
 </body>
 </html>

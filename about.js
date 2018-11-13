@@ -19,3 +19,12 @@ document.getElementById("courierElement").addEventListener("click", function (){
 function setFont(fontName) {
     container.style.fontFamily = fontName;
 }
+function bigImg(x) {
+    x.style.height = "300px";
+    x.style.width = "300px";
+}
+
+function normalImg(x) {
+    x.style.height = "256px";
+    x.style.width = "256px";
+}
