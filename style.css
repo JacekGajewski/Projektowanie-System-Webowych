@@ -35,7 +35,7 @@ nav ul {
 
 nav ul li {
 	margin-left: 70px;
-	padding-top: 25px; 
+	padding-top: 25px;
 	padding: 10px 0;
 	position: relative;
 	float: left;
@@ -82,7 +82,7 @@ nav ul li ul li{
 	margin-left: 0;
 	/*position: absolute;*/
 	background-color: grey;
-	padding-top: 16px; 
+	padding-top: 16px;
 	padding-left: 10px;
 	padding-right: 10px;
 	display: block;
@@ -245,3 +245,27 @@ table img {
 	background-color: red;
 	color: purple;
 }
+
+/*p:focus, a:active {*/
+	/*color: green;*/
+/*}*/
+
+/*#textHelp{*/
+	/*!*display: none;*!*/
+
+/*}*/
+
+
+.focus-blur{
+	display: block !important;
+
+}
+
+#textHelp{
+	display: none;
+}
+
+/*!*#textHelp:focus,  #textHelp:active{*!*/
+	/*!*!*display: none;*!*!*/
+/*!*}*!*/
+

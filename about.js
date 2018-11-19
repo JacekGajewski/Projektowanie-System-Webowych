@@ -28,3 +28,7 @@ function normalImg(x) {
     x.style.height = "256px";
     x.style.width = "256px";
 }
+
+document.getElementById("dupa").addEventListener("click", function (){
+    alert(document.anchors.length)
+});

@@ -6,7 +6,6 @@
 	<meta name="description" content="Polecane książki do przeczytania"/>
 	<meta name="keywords" content="książka, książki, lektura"/>
 	<link rel="stylesheet" href="newsletter.css" type="text/css" />
-	<script src="newsletter.js"></script>
 </head>
 <body>
 
@@ -40,19 +39,18 @@
 	<div class="container">
 		<h1 style= "font-size: 36px">Rejestracja</h1>
 		
-		<form autocomplete="on" action="dane.html">
+		<form id="myForm" autocomplete="on" action="dane.html">
 					Zwrot:
 					<select name="Zwrot">
 						<option>Pani</option>
 						<option>Pan</option>
 					</select>
-				
 
 				<table>
 					<tbody>
 						<tr>
 							<td width="150">Imie: </td>
-							<td><input type="text" id="uname" name="uname" maxlength="30" autofocus></td> <td>Tekst - max 30 znaków</td>
+							<td><input  type="text" id="uname" name="uname" maxlength="30" autofocus></td> <td>Tekst - max 30 znaków</td>
 						</tr>
 						<tr>
 							<td>Nazwisko: </td>
@@ -81,7 +79,7 @@
 						</tr>
 						<tr>
 							<td>Email: </td>
-							<td><input type="email" id="uemail" name="uemail" required></td>
+							<td><input type="email" id="uemail" name="uemail"></td>
 							<td></td>
 						</tr>
 						<tr>
@@ -108,13 +106,13 @@
 
 				<aside style=" font-size:10pt;   width:30em">Administratorem twoich danych osobowych jest Ksiazkowo. <br>Dane będą przetwarzane w celu wysyłki newslettera, na zasadach określonych w regulaminie.</aside> <br>
 				<a href="#">Regulamin</a><br><br>
-				<button type="submit" >Dalej</button>
+				<input id="submit" type="submit" >
 				<button type="reset">Wyczyść Dane</button>
 				<button onclick="zawartoscFormularza()">Sprawdź podane dane</button>
 				<p id="dane"></p>
 		</form>
 
 	</div>
-	
+    <script type="text/javascript" src="newsletter.js"></script>
 </body>
 </html>

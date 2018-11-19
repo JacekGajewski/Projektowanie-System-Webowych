@@ -1,11 +1,31 @@
-var goBtn  = document.getElementById("go");
+var createElementBtn  = document.getElementById("createElement");
+var test  = document.getElementById("test");
+
 var addBtn  = document.getElementById("appendElement");
 var replaceBtn  = document.getElementById("replaceElement");
 var removeBtn  = document.getElementById("removeElement");
 var list  = document.getElementById("listAppend");
+
 var changeBackground  = document.getElementById("changeBackground");
 
-goBtn.addEventListener("click", addElement);
+var myText  = document.getElementById("myText");
+var textHelp  = document.getElementById("textHelp");
+
+myText.onfocus = function() {
+    textHelp.classList.toggle("focus-blur");
+};
+
+myText.onblur = function() {
+    textHelp.classList.toggle("focus-blur");
+};
+
+test.addEventListener("click", function () {
+    if (confirm( "Are you sure you want to submit?" )) {
+        alert("True");
+    }else  alert("False");
+});
+
+createElementBtn.addEventListener("click", addElement);
 replaceBtn.addEventListener("click", replaceElement);
 addBtn.addEventListener("click", addElementBefore);
 
@@ -15,16 +35,16 @@ changeBackground.addEventListener("click", changeBackgroundColor);
 
 function addElement() {
     var btn = document.createElement("BUTTON");
-    var t = document.createTextNode("CLICK ME");
+    var t = document.createTextNode("New Button");
     btn.appendChild(t);
-    goBtn.appendChild(btn);
+    createElementBtn.appendChild(btn);
 }
 
 function addElementBefore() {
     var newItem = document.createElement("LI");
     var textnode = document.createTextNode("Zero");
     newItem.appendChild(textnode);
-    list.insertBefore(newItem, list.childNodes[0]);
+    list.insertBefore(newItem, list.childNodes[1]);
 }
 
 function replaceElement() {
@@ -34,7 +54,7 @@ function replaceElement() {
 }
 
 function removeElement() {
-    var parentList = document.getElementById('thirdElement').parentNode;
+    var parentList = document.getElementById("thirdElement").parentNode;
     parentList.removeChild(list.childNodes[1]);
 }
 
@@ -69,4 +89,3 @@ function ileEtykiet() {
     var x = document.anchors.length;
     document.getElementById("etykiety").innerHTML = x;
 }
-
