@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    background-image: url("bible.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.navigation {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background: grey;
+    height: 40px;
+    /*z-index: 100;*/
+}
+
+header:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 70px;
+    padding-top: 25px;
+    padding: 10px 0;
+    position: relative;
+    float: left;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+}
+
+nav ul li ul li{
+    margin-left: 0;
+    /*position: absolute;*/
+    background-color: grey;
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    float: none;
+}
+
+.drop {
+    /*position: absolute;*/
+}
+
+nav ul li ul li a{
+    display: block;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li ul {
+    position: absolute;
+    margin-top: -36px;
+    margin-left: 100px;
+
+}
+
+nav ul li ul li ul li{
+    /*margin-left: 120px;*/
+    /*position: absolute;*/
+    background-color: grey;
+    display: none;
+}
+
+nav ul li ul li:hover ul li{
+    display: inline-block;
+}
+
+input:focus {
+    background-color: green;
+}
+
+.container {
+    width: 940px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: grey;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 48px;
+    font-family: Courier, monospace;
+}
+
+h2
+{
+    font-variant: small-caps;
+    font-weight:900;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+input[type="checkbox"]:checked {
+    height: 17px;
+    width: 17px;
+}
+
+input:required {
+    background-color: yellow;
+}
+
+a:link {
+    /*background-color;*/
+}
+
+button:active{
+    color: green;
+}
+
+div:empty{
+    background-color: black;
+    width: 5px;
+    height: 50px;
+    float: left;
+    margin-right: 8px;
+}
+
+aside:last-of-type{
+    font-style: italic;
+}
