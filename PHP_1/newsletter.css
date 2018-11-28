@@ -82,6 +82,16 @@ nav ul li ul li{
     display: block;
     float: none;
 }
+p
+{ margin: 0; }
+.error { color: black }
+p.head { font-weight: bold; margin-top: 10px; }
+label
+{ width: 8em; float: left;
+}
+.userData{
+    margin-top: 8px;
+}
 
 .drop {
     /*position: absolute;*/

@@ -3,21 +3,7 @@
 <head>
     <meta charset = "utf-8">
     <title>Registration Form</title>
-    <style type = "text/css">
-        p
-        { margin: 0; }
-        .error { color: black }
-        p.head { font-weight: bold; margin-top: 10px; }
-        label
-        { width: 8em; float: left;
-         }
-        .userData{
-            margin-top: 8px;
-        }
-    </style>
-
     <meta name="description" content="Polecane książki do przeczytania"/>
-    <meta name="keywords" content="książka, książki, lektura"/>
     <link rel="stylesheet" href="newsletter.css" type="text/css" />
 </head>
 <body>
@@ -49,115 +35,125 @@
 <div class="container">
     <h1 style= "font-size: 36px">Rejestracja</h1>
 <?php
-$fname = isset($_POST[ "fname" ]) ? $_POST[ "fname" ] : "";
-$lname = isset($_POST[ "lname" ]) ? $_POST[ "lname" ] : "";
-$birthDate = isset($_POST[ "birthDate" ]) ? $_POST[ "birthDate" ] : "";
+$firstName = isset($_POST[ "firstName" ]) ? $_POST[ "firstName" ] : "";
+$lastName = isset($_POST[ "lastName" ]) ? $_POST[ "lastName" ] : "";
+$birthMonth = isset($_POST[ "birthMonth" ]) ? $_POST[ "birthMonth" ] : "";
 $email = isset($_POST[ "email" ]) ? $_POST[ "email" ] : "";
 $phone = isset($_POST[ "phone" ]) ? $_POST[ "phone" ] : "";
 $card = isset($_POST[ "card" ]) ? $_POST[ "card" ] : "";
 $bookTypes = isset($_POST[ "geners" ]) ? $_POST[ "geners" ] : "";
 
 $book = isset($_POST[ "book" ]) ? $_POST[ "book" ] : "";
-$os = isset($_POST[ "os" ]) ? $_POST[ "os" ] : "";
-$iserror = false;
-$formerrors =
-    array( "fnameerror" => false, "lnameerror" => false,
-        "emailerror" => false, "phoneerror" => false );
-$booklist = array( "Styczeń", "Luty", "Marzec", "Kwiecień" );
-$systemlist = array( "Styczeń", "Luty", "Marzec", "Kwiecień" );
-$inputlist = array( "fname" => "Imię",
-    "lname" => "Nazwisko", "email" => "Email",
-    "phone" => "Numer Telefonu", "birthDate" => "Miesiąc urodzin",
+$fruit = isset($_POST[ "fruit" ]) ? $_POST[ "fruit" ] : "";
+$inputError = false;
+$listOfErrors =
+    array( "firstNameError" => false, "lastNameError" => false,
+        "emailError" => false, "phoneError" => false , "fruitError" => false);
+$fruitList = array( "Marchewka", "Ziemniak", "Burak", "Sałata" );
+$inputLIst = array( "firstName" => "Imię",
+    "lastName" => "Nazwisko", "email" => "Email",
+    "phone" => "Numer Telefonu", "birthMonth" => "Miesiąc urodzin",
     "card" => "Numer karty");
 
 $simpleArray = array("Raz", "Dwa", "Trzy");
 
+$ipAddress = $_SERVER['SERVER_ADDR'];
+$serverName = $_SERVER['SERVER_NAME'];
+
 if ( isset( $_POST["submit"] ) ) {
-    if ($fname == "") {
-        $formerrors["fnameerror"] = true;
-        $iserror = true;
-    } // end if
-    if ($lname == "") {
-        $formerrors["lnameerror"] = true;
-        $iserror = true;
-    } // end if
-    if ($email == "") {
-        $formerrors["emailerror"] = true;
-        $iserror = true;
-    } // end if
-//    if (!preg_match("/^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$/",
-//        $phone)) {
-//        $formerrors["phoneerror"] = true;
-//        $iserror = true;
-//    } // end if
-    if (!$iserror)
-    {
-        print( "<p>Dziękujemy za rejestrację.</p>
+    if ($firstName == "") {
+        $listOfErrors["firstNameError"] = true;
+        $inputError = true;
+    }
+    if ($lastName == "") {
+        $listOfErrors["lastNameError"] = true;
+        $inputError = true;
+    }
+    if (!preg_match("/@/", $email)){
+        $listOfErrors["emailError"] = true;
+        $inputError = true;
+    }
+    if (!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/",
+        $phone)) {
+        $listOfErrors["phoneError"] = true;
+        $inputError = true;
+    }
+    if (strcmp($fruit, "Marchewka")){
+        $listOfErrors["fruitError"] = true;
+        $inputError = true;
+    }
+    if (!$inputError) {
+        print("<p>Dziękujemy za rejestrację.</p>
 <p class = 'head'>Twoje informacje:</p>
-<p>Imię i nazwisko: $fname $lname</p>
+<p>Adres IP: $ipAddress</p>
+<p>Nazwa serwera: $serverName</p>
+<p>Imię i nazwisko: $firstName $lastName</p>
 <p>Email: $email</p>");
-echo "<p>Numer telefonu: " .(int) $phone."</p>"; // Rzutowanie
-echo "<p>Miesiąc urodzin: $birthDate</p>";
-echo "<p>Numer karty: $card</p>";
-echo '<p>Typ: ' .gettype($card). ' Konwersja na int: </p>';
-settype($card, "integer");
-echo '<p>Typ: ' .gettype($card). '</p>';
+        echo "<p>Numer telefonu: " . (int)$phone . "</p>";
+        echo "Miesiąc urodzin: $birthMonth ";
+
+        echo ", mniej niż Kwiecień: ";
+        if ($birthMonth > "Kwiecień"){
+            echo "Nie<br>";
+        }else{
+            echo "Tak<br>";
+        }
+
+        echo preg_replace("/1/", "*", $card);
+        echo "<p>Numer karty: $card</p>";
+        echo '<p>Typ: ' . gettype($card) . ' Konwersja na int: </p>';
+        settype($card, "integer");
+        echo '<p>Typ: ' . gettype($card) . '</p>';
 
 
-print("</body></html>" );
+        print("</body></html>");
         echo '<p class="head">Wybrane rodzaje książek: </p>';
         for ($i = 0; $i < count($bookTypes); ++$i)
-            echo '<p>'.$bookTypes[$i].'</p>';
+            echo '<p>' . $bookTypes[$i] . '</p>';
 
+
+        echo '<p class="head">Pierszeństwo operatorów na przykładzie \'Testing \' . 1 + 2 . \'45\'</p>';
+        echo 'Testing ' . 1 + 2 . '45';
+
+        echo '<p class="head">Poruszanie się po tablicy</p>';
+        echo '<p>Current: ' . current($simpleArray) . '</p>';
+        echo '<p>Klucz: ' . key($simpleArray) . '</p>';
+        echo '<p>Next: ' . next($simpleArray) . '</p>';
+        echo '<p>Klucz: ' . key($simpleArray) . '</p>';
+        echo '<p>Reset: ' . reset($simpleArray) . '</p>';
+        die();
     }
-echo '<p class="head">Pierszeństwo operatorów na przykładzie \'Testing \' . 1 + 2 . \'45\'</p>';
-    echo 'Testing ' . 1 + 2 . '45';
-
-    echo '<p class="head">Poruszanie się po tablicy</p>';
-    echo '<p>Current: ' .current($simpleArray).'</p>';
-    echo '<p>Klucz: ' .key($simpleArray).'</p>';
-    echo '<p>Next: ' .next($simpleArray).'</p>';
-    echo '<p>Klucz: ' .key($simpleArray).'</p>';
-    echo '<p>Reset: ' .reset($simpleArray).'</p>';
-    die(); // finish the page
 }
 
 print( "<form method = 'post' action = 'simpleForm.php'>
 <h2>Dane użytkownika</h2>");
-if ( $iserror )
+if ( $inputError )
 {
-    print( "<p class = 'error'>Pola z * są obowiązkowe.</p>" );
+    if ( $listOfErrors[ "phonEerror" ] )
+        print( "<p class = 'error'>Podaj numer w formie 111-111-111" );
+    else if ( $listOfErrors[ "emailError" ] )
+        print( "<p class = 'error'>Wrong email adress" );
+    else if ( $listOfErrors[ "fruitError" ] )
+        print( "<p class = 'error'>Wybierz owoc!" );
+    else print( "<p class = 'error'>Pola z * są obowiązkowe.</p>" );
 }
-foreach ( $inputlist as $inputname => $inputalt )
+foreach ($inputLIst as $inputname => $inputalt )
 {
     print( "<div class='userData'><label>$inputalt:</label><input type = 'text'
 name = '$inputname' value = '" . $$inputname . "'>" );
-    if ( $formerrors[ ( $inputname )."error" ] == true )
+    if ( $listOfErrors[ ( $inputname )."error" ] == true )
         print( "<span class = 'error'>*</span>" );
     print( "</div>" );
 }
-if ( $formerrors[ "phoneerror" ] )
-    print( "<p class = 'error'>Must be in the form
-(555)555-5555" );
-print( "<h2>Publications</h2>
-<p>Jakie gatunki Cię interesują?</p>
 
-<select name = 'book'>" );
-foreach ( $booklist as $currbook )
-{
-    print( "<option" .
-        ($currbook == $book ? " selected>" : ">") .
-        $currbook . "</option>" );
-}
 print( "</select>
-<h2>Operating System</h2>
-<p>Which operating system do you ue?</p>" );
+<h2>Wybierz owoc</h2>" );
 $counter = 0;
-foreach ( $systemlist as $currsystem )
+foreach ($fruitList as $currsystem )
 {
-    print( "<input type = 'radio' name = 'os'
+    print( "<input type = 'radio' name = 'fruit'
 value = '$currsystem' " );
-    if ( ( !$os && $counter == 0 ) || ( $currsystem == $os ) )
+    if ( ( !$fruit && $counter == 0 ) || ( $currsystem == $fruit ) )
         print( "checked" );
     print( ">$currsystem" );
     ++$counter;
