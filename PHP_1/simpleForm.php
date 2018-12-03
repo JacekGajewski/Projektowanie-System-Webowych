@@ -129,7 +129,7 @@ print( "<form method = 'post' action = 'simpleForm.php'>
 <h2>Dane użytkownika</h2>");
 if ( $inputError )
 {
-    if ( $listOfErrors[ "phonEerror" ] )
+    if ( $listOfErrors[ "phoneError" ] )
         print( "<p class = 'error'>Podaj numer w formie 111-111-111" );
     else if ( $listOfErrors[ "emailError" ] )
         print( "<p class = 'error'>Wrong email adress" );
@@ -141,7 +141,7 @@ foreach ($inputLIst as $inputname => $inputalt )
 {
     print( "<div class='userData'><label>$inputalt:</label><input type = 'text'
 name = '$inputname' value = '" . $$inputname . "'>" );
-    if ( $listOfErrors[ ( $inputname )."error" ] == true )
+    if ( $listOfErrors[ ( $inputname )."Error" ] == true )
         print( "<span class = 'error'>*</span>" );
     print( "</div>" );
 }
@@ -168,6 +168,6 @@ echo "<p><input type='checkbox' name='geners[]' value = 'Romantyczne'/>Romantycz
 echo "<p><input type='checkbox' name='geners[]' value = 'Inne'/>Inne</p>";
 
 print( "<p class = 'head'><input type = 'submit' name = 'submit'
-value = 'Register'></p></form></body></html>" );
+value = 'Rejestruj'></p></form></body></html>" );
 ?>
 </div>
