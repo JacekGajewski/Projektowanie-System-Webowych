@@ -2,6 +2,15 @@ body{
     background-color: #000;
 }
 
+p {
+    font-family: "Times New Roman", Times, serif;
+    color: rgba(19, 9, 0, 0.64);
+}
+
+h1 {
+    font-family: "Times New Roman";
+    color: rgba(0, 0, 0, 0.44);
+}
 table{
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +25,7 @@ table{
 th, td {
     border: 5px solid black;
     border-collapse: collapse;
+    color: #dddddd;
 }
 
 table tr th{

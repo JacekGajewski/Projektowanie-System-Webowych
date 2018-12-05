@@ -93,12 +93,13 @@ include 'css_cookie_check.php'
                 ?>
 
             </li>
+
 <!--            <li class="nav-item">-->
 <!--                -->
 <!--            </li>-->
         </ul>
     </div>
-</nav>
+</nav
 
 <!--<div class="jumbotron container">-->
 <!--    <h1 class="display-4">Hello, world!</h1>-->
@@ -107,3 +108,6 @@ include 'css_cookie_check.php'
 <!--    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
 <!--    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
 <!--</div>-->
+
+</body>
+</html>

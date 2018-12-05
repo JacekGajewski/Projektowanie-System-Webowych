@@ -1,7 +1,14 @@
 body{
     background-color: #5749;
 }
-
+p {
+    font-family: "Arial";
+    color: rgba(255, 0, 40, 0.58);
+}
+h1 {
+    font-family: "Arial";
+    color: #1d1d1d;
+}
 table{
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +23,7 @@ table{
 th, td {
     border: 5px solid black;
     border-collapse: collapse;
+    color: cornsilk;
 }
 
 table tr th{

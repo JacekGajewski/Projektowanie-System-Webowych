@@ -1,6 +1,14 @@
 body{
     background-color: #999;
 }
+p {
+    font-family: "Dejavu Serif";
+    color: rgba(0, 0, 0, 0.32);
+}
+h1 {
+    font-family: "Dejavu Serif";
+    color: #4d4d4d;
+}
 
 table{
     margin-left: auto;
@@ -16,6 +24,7 @@ table{
 th, td {
     border: 5px solid black;
     border-collapse: collapse;
+    color: #9494ff;
 }
 
 table tr th{

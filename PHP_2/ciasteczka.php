@@ -1,15 +1,25 @@
 <?php
+
 // write each form field�s value to a cookie and set the
 // cookie�s expiration date
+session_start();
 if(isset($_POST['color'])) {
-    setcookie("color", $_POST["color"], time() + 3600);
+    setcookie("color", $_POST["color"], time() + 10);
 } else $color = "#808080";
 if(isset($_POST['colorC'])) {
-    setcookie("colorC", $_POST["colorC"], time() + 3600);
+    setcookie("colorC", $_POST["colorC"], time() + 10);
 } else $colorC = "#000000";
 if(isset($_POST['font'])) {
-    setcookie("font", $_POST["font"], time() + 3600);
+    setcookie("font", $_POST["font"], time() + 10);
 } else $font = "Courier";
+if(!isset($_SESSION['sesja'])) $_SESSION = "false";
+if(isset($_SESSION['sesja'])) {
+    setcookie("sesja", $_SESSION["sesja"], time() + 10);
+}
+
+
+
+
 ?><
 <DOCTYPE html>
 <html>
@@ -57,12 +67,35 @@ if(isset($_POST['font'])) {
 
 <div class="container" id="container" style="background-color: <?php echo $_COOKIE['color']; ?>">
 
-    <a href="ciasteczka.html">Spersonalizuj ustawienia strony</a> ||
-    <a href="diagnostyka.php">Strona Diagnostyczna</a>
+<?php
+
+
+
+if ( $_COOKIE['sesja'] == "true") {
+    echo "Witaj admin!";
+    echo <<<END
+            <button><a href="personalizacja.php">Spersonalizuj ustawienia strony</a> </button>  <br>
+END;
+}
+else{
+
+    echo <<<END
+                      <form action="eror.php" method="post">
+                           Login: <br> <input type="text" name="log"> <br>
+                            Hasło: <br> <input type = "password" name="pas"> <br>
+                              <input type="submit" value="Loguj" name="submit"/>
+                       </form>
+END;
+}
+?>
+
+
+
+    <button><a href="diagnostyka.php">Strona Diagnostyczna</a></button>
 
 
     <div id="lorem1" >
-        <p style="color: <?php echo $_COOKIE['colorC'];?> ; font-family:<?php echo $_COOKIE['font'];?> ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <p style="color: <?php echo $_COOKIE['colorC'];?> ; font-family:<?php echo $_COOKIE['font'];?>">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
