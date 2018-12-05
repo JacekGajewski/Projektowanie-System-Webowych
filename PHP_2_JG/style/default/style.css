@@ -1,0 +1,99 @@
+body{
+    background-color: #5749;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-collapse: collapse;
+
+    border-style: solid;
+    border-width: 20px;
+    border-color: black;
+}
+
+th, td {
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+
+table tr th{
+    width: 25%;
+}
+
+table img {
+    width: 200px;
+    height: 300px;
+}
+
+
+
+.recomended-book{
+    padding: 5px;
+
+}
+
+@media(min-width: 860px){
+    .container-recommended{
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+
+#book-title{
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+#book-title th{
+    padding-bottom: 10px;
+}
+
+#book-description{
+    font-size: .75em;
+}
+
+#book-description th{
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+#random-book{
+    margin-top: 20px;
+    color: black;
+    width: 10em;
+    height: 2em;
+    font-size: 22px;
+}
+
+#parseInt, #parseFloat, #submit, .button{
+    color: black;
+}
+
+
+.container-new-background{
+    background-color: red;
+    color: purple;
+}
+
+/*p:focus, a:active {*/
+/*color: green;*/
+/*}*/
+
+/*#textHelp{*/
+/*!*display: none;*!*/
+
+/*}*/
+
+
+.focus-blur{
+    display: block !important;
+
+}
+
+#textHelp{
+    display: none;
+}
