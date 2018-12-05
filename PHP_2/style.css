@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    background-image: url("images/bible.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.navigation {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background: grey;
+    height: 40px;
+    /*z-index: 100;*/
+}
+
+header:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 70px;
+    padding-top: 25px;
+    padding: 10px 0;
+    position: relative;
+    float: left;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+}
+
+nav a:visited{
+    color: white;
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+}
+
+nav ul li ul li{
+    margin-left: 0;
+    /*position: absolute;*/
+    background-color: grey;
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    float: none;
+}
+
+.drop {
+    /*position: absolute;*/
+}
+
+nav ul li ul li a{
+    display: block;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li ul {
+    position: absolute;
+    margin-top: -36px;
+    margin-left: 100px;
+
+}
+
+nav ul li ul li ul li{
+    /*margin-left: 120px;*/
+    /*position: absolute;*/
+    background-color: grey;
+    display: none;
+}
+
+nav ul li ul li:hover ul li{
+    display: inline-block;
+}
+
+.container-arial{
+    font-family: Arial;
+}
+
+.container-times{
+    font-family: Helvetica, monospace;
+}
+
+.container-helvetica{
+    font-family: Helvetica;
+}
+
+.container-verdana{*/
+ont-family: "DejaVu Sans", sans-serif;
+}
+
+.container {
+    width: 940px;
+    height: 1200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: grey;
+    background-image: url("images/logo.png");
+    background-repeat: no-repeat;
+    /*background-origin: border-box;*/
+    background-position: center;
+    background-size: 300px 300px;
+    /*font-family: "Liberation Sans", Helvetica, sans-serif;*/
+
+}
+
+
+
