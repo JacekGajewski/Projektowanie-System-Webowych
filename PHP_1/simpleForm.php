@@ -48,7 +48,7 @@ $fruit = isset($_POST[ "fruit" ]) ? $_POST[ "fruit" ] : "";
 $inputError = false;
 $listOfErrors =
     array( "firstNameError" => false, "lastNameError" => false,
-        "emailError" => false, "phoneError" => false , "fruitError" => false);
+        "emailError" => false, "phoneError" => false , "fruitError" => false, "cardError" => false, "birthMonthError" => false);
 $fruitList = array( "Marchewka", "Ziemniak", "Burak", "Sałata" );
 $inputLIst = array( "firstName" => "Imię",
     "lastName" => "Nazwisko", "email" => "Email",
