@@ -1,0 +1,59 @@
+﻿body {
+    margin: 0;
+    background-image: url("/images/bible.jpg");
+    background-size: cover;
+    color: white;
+}
+
+.containerr {
+    width: 940px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: Courier, monospace;
+}
+
+h2 {
+    font-variant: small-caps;
+    font-weight: 900;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+input[type="checkbox"]:checked {
+    height: 17px;
+    width: 17px;
+}
+
+input:required {
+    background-color: yellow;
+}
+
+a:link {
+    /*background-color;*/
+}
+
+button:active {
+    color: green;
+}
+
+div:empty {
+    background-color: black;
+    width: 5px;
+    height: 50px;
+    float: left;
+    margin-right: 8px;
+}
+
+aside:last-of-type {
+    font-style: italic;
+}
