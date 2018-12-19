@@ -1,0 +1,147 @@
+﻿body {
+    margin: 10px;
+    background-image: url("/images/bible.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+#list {
+    width: 200px;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 25px;
+}
+
+ol {
+    background: black;
+    padding: 20px;
+    list-style-type: upper-roman;
+    padding-left: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: thin;
+}
+
+
+    ol li {
+        background: #605f5f;
+        margin: 5px;
+        padding-left: 5px;
+    }
+
+#list li:nth-child(2) {
+    color: red;
+}
+
+
+a:visited {
+    color: blue;
+}
+
+.containerr {
+    width: 940px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: grey;
+    color: white;
+}
+
+
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 20px;
+    border-color: black;
+}
+
+th, td {
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+
+table tr th {
+    width: 25%;
+}
+
+table img {
+    width: 200px;
+    height: 300px;
+}
+
+
+
+.recomended-book {
+    padding: 5px;
+}
+
+
+
+
+#book-title {
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+    #book-title th {
+        padding-bottom: 10px;
+    }
+
+#book-description {
+    font-size: .75em;
+}
+
+    #book-description th {
+        vertical-align: top;
+        padding-bottom: 10px;
+    }
+
+#random-book {
+    margin-top: 20px;
+    color: black;
+    width: 10em;
+    height: 2em;
+    font-size: 22px;
+}
+
+#parseInt, #parseFloat, #submit, .button {
+    color: black;
+}
+
+
+.container-new-background {
+    background-color: red;
+    color: purple;
+}
+
+/*p:focus, a:active {*/
+/*color: green;*/
+/*}*/
+
+/*#textHelp{*/
+/*!*display: none;*!*/
+
+/*}*/
+
+
+.focus-blur {
+    display: block !important;
+}
+
+#textHelp {
+    display: none;
+}
+
+/*!*#textHelp:focus,  #textHelp:active{*!*/
+/*!*!*display: none;*!*!*/
+/*!*}*!*/
+
